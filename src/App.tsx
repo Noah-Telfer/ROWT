@@ -8,6 +8,8 @@ import {PersonList} from  './components/Test/Persons';
 import {Status} from './components/Test/Status';
 import {Heading} from './components/Test/Heading';
 import { Oscar } from './components/Test/Oscar';
+import { Button } from './components/Test/Button';
+import { Container } from './components/Test/Container';
 
 
 const  App: React.FC  = () =>{
@@ -42,6 +44,8 @@ const  App: React.FC  = () =>{
       <Oscar> 
         <Heading> Oscar Goes to Leonardo Dicaprio!</Heading>
       </Oscar>
+      <Button handleClick={(event, id) => {console.log('Button Clicked', event)}}/>
+      <Container styles={{border:'1px solid black'}}/>
   </div>
   );
 }
