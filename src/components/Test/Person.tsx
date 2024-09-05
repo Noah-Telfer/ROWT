@@ -1,11 +1,8 @@
+import {Name} from '../../types/General.types';
+
 type PersonProps ={
-    name: {
-        first: string
-        last: string
-    }
+    name: Name
 }
-
-
 
 export const Person = (props: PersonProps) => {
     return <div>{props.name.first} {props.name.last}</div>

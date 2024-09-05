@@ -10,6 +10,7 @@ import {Heading} from './components/Test/Heading';
 import { Oscar } from './components/Test/Oscar';
 import { Button } from './components/Test/Button';
 import { Container } from './components/Test/Container';
+import {LoggedIn} from './components/State/LoggedIn'
 
 
 const  App: React.FC  = () =>{
@@ -46,6 +47,7 @@ const  App: React.FC  = () =>{
       </Oscar>
       <Button handleClick={(event, id) => {console.log('Button Clicked', event)}}/>
       <Container styles={{border:'1px solid black'}}/>
+      <LoggedIn />
   </div>
   );
 }
