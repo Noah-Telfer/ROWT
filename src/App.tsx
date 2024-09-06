@@ -11,7 +11,8 @@ import { Oscar } from './components/Test/Oscar';
 import { Button } from './components/Test/Button';
 import { Container } from './components/Test/Container';
 import {LoggedIn} from './components/State/LoggedIn'
-
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 
 const  App: React.FC  = () =>{
   const personName = {
@@ -48,6 +49,8 @@ const  App: React.FC  = () =>{
       <Button handleClick={(event, id) => {console.log('Button Clicked', event)}}/>
       <Container styles={{border:'1px solid black'}}/>
       <LoggedIn />
+
+      <ThemeContextProvider children={<Box/>}></ThemeContextProvider>
   </div>
   );
 }
