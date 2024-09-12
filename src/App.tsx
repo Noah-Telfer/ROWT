@@ -13,6 +13,8 @@ import { Container } from './components/Test/Container';
 import {LoggedIn} from './components/State/LoggedIn'
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
+import { UserContextProvider } from './components/context/UserContext';
+import { User } from './components/context/User';
 
 const  App: React.FC  = () =>{
   const personName = {
@@ -36,9 +38,9 @@ const  App: React.FC  = () =>{
   ]
   return (
 
-  <div>
+  <div className="scrollable" >
     
-      <Greet name = 'Busy Man' messageCount={20} isLoggedIn={true}/>
+      {/* <Greet name = 'Busy Man' messageCount={20} isLoggedIn={true}/>
       <Person name = {personName}/>
       <PersonList nameList = {nameList}/>
       <Status status = 'loading'/>
@@ -50,7 +52,8 @@ const  App: React.FC  = () =>{
       <Container styles={{border:'1px solid black'}}/>
       <LoggedIn />
 
-      <ThemeContextProvider children={<Box/>}></ThemeContextProvider>
+      <ThemeContextProvider ><Box/></ThemeContextProvider> */}
+      <UserContextProvider> <User/></UserContextProvider>
   </div>
   );
 }
