@@ -40,7 +40,7 @@ const  App: React.FC  = () =>{
 
   <div className="scrollable" >
     
-      {/* <Greet name = 'Busy Man' messageCount={20} isLoggedIn={true}/>
+      <Greet name = 'Busy Man' messageCount={20} isLoggedIn={true}/>
       <Person name = {personName}/>
       <PersonList nameList = {nameList}/>
       <Status status = 'loading'/>
@@ -52,7 +52,7 @@ const  App: React.FC  = () =>{
       <Container styles={{border:'1px solid black'}}/>
       <LoggedIn />
 
-      <ThemeContextProvider ><Box/></ThemeContextProvider> */}
+      <ThemeContextProvider ><Box/></ThemeContextProvider>
       <UserContextProvider> <User/></UserContextProvider>
   </div>
   );

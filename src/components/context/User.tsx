@@ -8,26 +8,25 @@ export const User = () => {
     const handleLogin = () => {
         
         userContext.setUser({name: {first: "Noah",last: "Telfer"},email:{email: "noahtelfer@fakeGmail.com"}})
-            
+        userContext.toggleLogin()    
         
     }
     const handleLogout = () => {
-        userContext.setUser(null)  
+        userContext.setUser(null)
+        userContext.toggleLogin()  
     } 
     
     return (
         
         <div> 
-            {userContext === null?
-                <button onClick={handleLogin}>Login</button>:
-                
+            {userContext.loggedIn?
                 <div>
                     <div> User Name Is {userContext?.user?.name.first} {userContext?.user?.name.last}</div>
                     <div> user Email Is {userContext?.user?.email.email} </div>
                     <button onClick = {handleLogout}>Logout</button>
                     <script>console.log(userContext)</script>
-                </div>
-            
+                </div>:
+                <button onClick={handleLogin}>Login</button>
              }        
         </div>
     )
