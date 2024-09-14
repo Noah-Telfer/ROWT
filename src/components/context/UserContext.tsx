@@ -1,9 +1,9 @@
 import {Name, Email} from '../../types/General.types'
 import React, {useState, createContext } from 'react'
 
-export type AuthUser = {
+export type AuthUser = Email & {
     name: Name
-    email: Email
+    
 }
 
 type UserContextProviderProps = {

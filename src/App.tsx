@@ -17,6 +17,9 @@ import { UserContextProvider } from './components/context/UserContext';
 import { User } from './components/context/User';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
+import {Private} from './components/auth/Private'
+import {Profile} from './components/auth/Profile'
+
 
 const  App: React.FC  = () =>{
   const personName = {
@@ -58,6 +61,7 @@ const  App: React.FC  = () =>{
       <UserContextProvider> <User/></UserContextProvider>
       <DomRef></DomRef>
       <MutableRef></MutableRef>
+      <Private isLoggedIn={false} component={Profile}/>
   </div>
   );
 }

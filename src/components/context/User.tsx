@@ -7,7 +7,7 @@ export const User = () => {
 
     const handleLogin = () => {
         
-        userContext.setUser({name: {first: "Noah",last: "Telfer"},email:{email: "noahtelfer@fakeGmail.com"}})
+        userContext.setUser({name: {first: "Noah",last: "Telfer"},email: "noahtelfer@fakeGmail.com"})
         userContext.toggleLogin()    
         
     }
@@ -22,7 +22,7 @@ export const User = () => {
             {userContext.loggedIn?
                 <div>
                     <div> User Name Is {userContext?.user?.name.first} {userContext?.user?.name.last}</div>
-                    <div> user Email Is {userContext?.user?.email.email} </div>
+                    <div> user Email Is {userContext?.user?.email} </div>
                     <button onClick = {handleLogout}>Logout</button>
                     <script>console.log(userContext)</script>
                 </div>:
