@@ -1,0 +1,20 @@
+.my-button {
+    width: 142px;
+    height: 48px;
+    border-radius: 22px;
+    position: absolute;
+    top: 25px;
+    /* 25 pixels from the top of the header */
+    left: 878px;
+    /* 878 pixels from the left of the header */
+    background-color: var(--primary-color);
+    /* You can customize the background color */
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    /* Ensures vertical centering of text */
+}

@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #F0FAFC;
+    --accent-color: #E89465;
+    --secondary-color: #293A4D;
+    --viewport-width: '1px';
+    --viewport-height: '1px'
+}
+
+/* Primary background for sections or entire page */
+.primary-bg {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Accent background, useful for buttons or highlights */
+.accent-bg {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Secondary background, for headers or footer sections */
+.secondary-bg {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Accent button */
+.accent-btn {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    color: #F0FAFC;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accent-btn:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Border styling using accent color */
+.accent-border {
+    border: 2px solid var(--accent-color);
+    padding: 10px;
+}
+
+/* Text color variations */
+.primary-text {
+    color: var(--primary-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+.secondary-text {
+    color: var(--secondary-color);
+}

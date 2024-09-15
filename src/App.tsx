@@ -5,12 +5,13 @@ import './styles/global.css'
 import Rectangle from './components/Rectangle/Rectangle';
 import { Container } from './components/containers/Container';
 import { BackgroundContainer } from './components/containers/BackgroundContainer';
+import { Header } from './components/header/Header';
 
 const  App: React.FC  = () =>{
   return (
     <Container>
       <BackgroundContainer>
-        <h1 className="primary-text"> This is my CSS Project</h1>
+        <Header></Header>
 
       </BackgroundContainer>
     </Container>
