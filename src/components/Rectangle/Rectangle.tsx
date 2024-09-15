@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 const Rectangle: React.FC = () => {
     return (
         <div style={styles.container}>
-            <h1 style={styles.title}>rectangle</h1>
+            <h1 style={styles.title}>Circle</h1>
             <Draggable>
                 <div style={styles.rectangle}></div>
             </Draggable>
@@ -25,9 +25,10 @@ const styles = {
         marginBottom: '20px', 
     },
     rectangle: {
-        width: '150px', 
+        width: '100px', 
         height: '100px', 
         backgroundColor: 'lightblue', 
+        borderRadius: '50%',
         border: '1px solid #000', 
         cursor: 'move', 
     },
