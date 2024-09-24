@@ -1,14 +1,16 @@
 import React from 'react'; 
 import { GenericComponent } from '../components/containers/GenericComponent'; 
-type ComponentData = { 
+
+type ComponentData<E extends React.ElementType> = { 
     id: string; 
-    style?: React.CSSProperties; 
+    style?: React.CSSProperties|null; 
     children?: React.ReactNode;
     className?: string;
-    as?: React.ElementType;
+    as?: E;
 }; 
-     
-    type JSONData = ComponentData[];
+    type ComponentSegment<E extends React.ElementType> = ComponentData<E> & Omit<React.ComponentProps<E>, keyof ComponentData<E>>  
+
+    type JSONData = ComponentSegment<any>[];
     
     export const GenerateComponentsFromJSON = (data: JSONData) => {
          return Object.values(data).map((item) => {
@@ -20,7 +22,7 @@ type ComponentData = {
                  as 
                 } = item;
                  return (
-                    <GenericComponent key={id} style={style} className={className} as={as} >
+                    <GenericComponent key={id} style={style || undefined } className={className} as={as} >
                         {children} 
                     </GenericComponent>
                 ); 
