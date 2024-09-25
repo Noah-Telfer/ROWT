@@ -9,15 +9,5 @@
         "children": "Projects",
         "className": "my-button",
         "as": "button"
-    },
-    {
-        "id": "123123fsdh1h",
-        "style": {
-            "color": "red",
-            "fontSize": "18px"
-        },
-        "children": "This is a red text",
-        "className": "another-class",
-        "as": "div"
     }
 ]
