@@ -13,14 +13,9 @@ export const Header: React.FC = () => {
 }
 */
 export const Header: React.FC = () => {
-    
-    useEffect(() => {
-        console.log(jsonData);
-    },[]);
-    const htmlElement= jsonData[0].as as React.ElementType;
-    return (<header className="header"> 
-        <GenericComponent as = {htmlElement} className={jsonData[0].className} style={jsonData[0].style as React.CSSProperties}>{jsonData[0].children}</GenericComponent>
-        </header>
+    return(
+        <header className='header'>{GenerateComponentsFromJSON('Header')}</header>
+        
     )
 }
 
