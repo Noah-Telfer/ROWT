@@ -1,6 +1,6 @@
 import React from "react"; 
-import headerv1 from '../content/data/header_json_data_simple.json'
-
+import headerv1 from '../content/data/header_json_data.json'
+import bodyv1 from '../content/data/body_json_data.json'
 
 export type GetJsonDataProps = 'Header' | 'Footer' | 'Body'
 
@@ -11,7 +11,7 @@ export function GetJsonData (component : GetJsonDataProps):any[] {
             returnJsonVal = headerv1
             break;
         case 'Body':
-            returnJsonVal = headerv1
+            returnJsonVal = bodyv1
             break;
         case 'Footer':
             returnJsonVal = headerv1

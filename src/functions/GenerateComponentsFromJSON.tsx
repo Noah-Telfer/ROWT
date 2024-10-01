@@ -6,7 +6,7 @@ import {GetJsonData, GetJsonDataProps} from './GetJsonData'
 
     
     export const GenerateComponentsFromJSON = (component:GetJsonDataProps) => {
-        const jsonDataVal=GetJsonData('Header');
+        const jsonDataVal=GetJsonData(component);
 
          return jsonDataVal.map((item) => (
                 <GenericComponent

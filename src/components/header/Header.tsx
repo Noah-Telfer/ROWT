@@ -4,7 +4,7 @@ import jsonData from '../../content/data/header_json_data_simple.json'
 import { GenericComponent, GenericComponentProps} from '../containers/GenericComponent'
 import {GenerateComponentsFromJSON} from '../../functions/GenerateComponentsFromJSON'
 import '../generic/button.css'
-import fs from 'fs'
+import './logo.css'
 /*
 export const Header: React.FC = () => {
     return <header className="header"> 

@@ -6,13 +6,13 @@ import Rectangle from './components/Rectangle/Rectangle';
 import { Container } from './components/containers/Container';
 import { BackgroundContainer } from './components/containers/BackgroundContainer';
 import { Header } from './components/header/Header';
-
+import { Body } from './components/body/Body';
 const  App: React.FC  = () =>{
   return (
     <Container>
       <BackgroundContainer>
         <Header></Header>
-
+        <Body></Body>
       </BackgroundContainer>
     </Container>
   );
