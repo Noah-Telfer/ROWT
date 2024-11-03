@@ -1,14 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Rectangle from './components/Rectangle/Rectangle';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-const  App: React.FC  = () =>{
-  return (
-    <div>
-      <Rectangle />
-    </div>
-  );
-}
+const App: React.FC = () => {
+  return <div>{children}</div>;
+};
 
 export default App;
