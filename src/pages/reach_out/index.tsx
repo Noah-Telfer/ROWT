@@ -6,3 +6,6 @@ const ReachOut = () => {
         <div>ReachOut</div>
     )
 }
+
+
+export default ReachOut;
