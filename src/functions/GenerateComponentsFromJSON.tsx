@@ -15,7 +15,7 @@ import {GetJsonData, GetJsonDataProps} from './GetJsonData'
                     className={item.className}
                     style={item.style as React.CSSProperties}
                 >
-                    {item.children}
+                    {item.children as React.ReactNode}
                 </GenericComponent>
 
             ))

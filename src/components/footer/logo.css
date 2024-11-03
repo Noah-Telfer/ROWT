@@ -1,0 +1,25 @@
+.footer-logo {
+    /* width:11.02% ;
+    height: 9.94%; */
+    width: 85px;
+    height: 91px;
+    background-image: url(../../content/images/TE_LogoNoBackground.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Shift back by 50% of its own size to truly center */
+    width: 20%;
+    /* Width as a percentage of the footer */
+}

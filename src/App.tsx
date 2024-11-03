@@ -7,12 +7,15 @@ import { Container } from './components/containers/Container';
 import { BackgroundContainer } from './components/containers/BackgroundContainer';
 import { Header } from './components/header/Header';
 import { Body } from './components/body/Body';
+import { Footer } from './components/footer/Footer'
+
 const  App: React.FC  = () =>{
   return (
     <Container>
       <BackgroundContainer>
         <Header></Header>
         <Body></Body>
+        <Footer></Footer>
       </BackgroundContainer>
     </Container>
   );

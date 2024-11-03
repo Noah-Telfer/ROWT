@@ -40,15 +40,21 @@ img {
     background-color: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  
+  
+
 }
 
 .hero-text p {
-    padding: 0.5rem 0 2rem 0;
-    font-size: 1.1rem;
-    font-weight: 500;
+    padding: 0.2rem 0 .5rem 0;
+    font-size: 2rem;
+    font-weight: 1000;
+    white-space: pre;
 }
 
-.hero-text button {
+/* .hero-text button {
     padding: 0.8rem;
     border-radius: 5px;
     cursor: pointer;
@@ -59,4 +65,4 @@ img {
     background-color: rgb(42, 95, 243);
     color: white;
     margin-left: 0.5rem;
-}
+} */
