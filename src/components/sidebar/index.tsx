@@ -27,16 +27,17 @@ const Sidebar = () => {
     <Box
       sx={{
         backgroundColor: "#F0FAFC",
-        padding: 2,
-        borderRadius: 2,
-        position: "fixed",
-        left: 0,
-        top: 0,
-        display: "flex",
-        flexDirection: {
-          xs: "row",
-          lg: "row",
-        },
+        padding: 0,
+        borderRadius: 0,
+        // position: "fixed",
+        // left: 0,
+        // top: 0,
+        // display: "flex",
+        zIndex: 2,
+        // flexDirection: {
+        //   xs: "column",
+        //   lg: "column",
+        // },
         alignItems: "center",
         justifyContent: "space-between",
         width: {
@@ -44,6 +45,7 @@ const Sidebar = () => {
           lg: 1,
         },
         height: "10vh",
+        opacity: 0.0
       }}
     ></Box>
   );
