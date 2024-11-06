@@ -8,10 +8,10 @@ const HeroBody = () => {
     <Box
         sx={{
             position: "absolute",
-            display: "flex",
-            flexDirection: "column",
             top: "25%",
             left: "5%",
+            display: "flex",
+            flexDirection: "column",
             padding: 2,
             borderRadius: 2,
             width: "auto", 
