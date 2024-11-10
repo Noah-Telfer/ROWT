@@ -5,7 +5,7 @@ import HeroBody from "../../components/herobody/herobody";
 
 const Home = () => {
     return (
-        <Layout prefrence="secondary"><HeroBody/></Layout>
+        <Layout prefrence="primary"><HeroBody/></Layout>
     )
 }
 

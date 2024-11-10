@@ -1,11 +1,20 @@
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Theme, Typography } from "@mui/material";
 import Logo from "../../assets/images/TELogoNoBackground.png";
 import React from "react";
+import ThemePrefrence from "../../types/generalTypes";
 
-const FooterHome = () => {
-    return (
-        <Box
-            sx={{
+type FooterHomeProps = {
+    prefrence: ThemePrefrence
+}
+
+
+const FooterHome = ({prefrence}: FooterHomeProps) => {
+
+    let footerStyle: SxProps<Theme> = {};
+
+    switch(prefrence){
+        case "primary":
+            footerStyle = {
                 display: "flex",
                 flexDirection: "row",
                 position: "fixed",
@@ -13,9 +22,33 @@ const FooterHome = () => {
                 left: 0,
                 justifyContent: "center",
                 width: "100%",
-                height: "12.5vh",
+                height: "10vh",
                 backgroundColor: "#F0FAFC",
-            }}
+            }
+            break;
+        
+
+        case "secondary":
+            footerStyle = {
+                display: "flex",
+                flexDirection: "row",
+                position: "fixed",
+                bottom:0,
+                left: 0,
+                justifyContent: "center",
+                width: "100%",
+                height: "10vh",
+                backgroundColor: "#293A4D",
+            }
+            break;
+
+        default:
+            break;
+    }
+
+    return (
+        <Box
+            sx={footerStyle}
         >
             <Box sx={{ 
                         display: {

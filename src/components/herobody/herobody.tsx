@@ -1,37 +1,114 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react"
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { isTemplateExpression } from "typescript";
 
 
+const projectLink = {
+    name: "See How",
+    link: "/Projects"
+}
 
 const HeroBody = () => {
- return (
+  return (
     <Box
-        sx={{
-            position: "absolute",
-            top: "25%",
-            left: "5%",
-            display: "flex",
-            flexDirection: "column",
-            padding: 2,
-            borderRadius: 2,
-            width: "auto", 
-        }}
+      sx={{
+        position: "absolute",
+        top: "25%",
+        left: "5%",
+        display: "flex",
+        flexDirection: "column",
+        padding: 2,
+        borderRadius: 2,
+        backdropFilter: "blur(5%)",
+        width: "auto",
+      }}
     >
-        <Typography variant= "h2" component="h1">
-            Telfer Enterprises
-        </Typography>
-        <Box
-            sx={{
-                display:"flex",
-                flexDirection: "row"
-            }}
+      <Typography
+        variant="h1" // Adjust the variant as needed
+        sx={{
+          color: "#F0FAFC",
+          fontSize: "3.5rem", // Customize size
+          fontWeight: "bold", // Customize weight if desired
+          textAlign: "center", // Center alignment, optional // Other styles as needed
+          textShadow:
+            "1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000",
+        }}
+      >
+        Telfer Enterprises
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            sd: "column",
+            md:"row",
+          },
+          alignItems: {
+            xs: "center",
+            sd: "center",
+            md: undefined,
+          },
+          justifyContent: {
+            xs: "center",
+            sd: "center",
+            md: undefined,
+          }
+        }}
+      >
+        <Typography
+          
+          component="h1"
+          variant="h2"
+          sx={{
+            flex: {
+                xs:undefined,
+                sd: undefined,
+                md: 1,
+              },
+            textAlign:{
+                xs: "center",
+                sd: "center",
+                md: "left",
+              },
+            color: "#000000",
+            fontWeight: 200,
+            fontSize: "1.8rem"
+          }}
         >
-            <Typography  component="p">
-                Striving to Learn and Improve Everyday.
-            </Typography>
-            <Button variant="contained"> See How</Button>
-        </Box>
+          Striving to Learn and<br/>Improve Everyday.
+        </Typography>
+        <Link
+            key={projectLink.name}
+            to={projectLink.link}
+            style={{textDecoration:"none"}}
+        >
+            <Button
+                variant="contained"
+                sx= {{
+                    flex: {
+                        xs:undefined,
+                        sd: undefined,
+                        md: 1,
+                    },
+
+                    maxWidth: "140px",
+                    maxHeight: "60px",
+                    minHeight: "60px",
+                    backgroundColor: "#E89465",
+                    borderRadius: "22px",
+                    color: "#F0FAFC", 
+                    fontWeight: 700, 
+                    padding: "8px 16px", 
+                    fontSize: "1rem"
+                }}
+            > 
+                {projectLink.name}
+            </Button>
+        </Link>
+      </Box>
     </Box>
- );
+  );
 };
 export default HeroBody;

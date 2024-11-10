@@ -1,7 +1,6 @@
 
 
-type ThemePrefrence = {
-    prefrence: "primary" | "secondary";
-}
+type ThemePrefrence = "primary" | "secondary";
+
 
 export default ThemePrefrence ;

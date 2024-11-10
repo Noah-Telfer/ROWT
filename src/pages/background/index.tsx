@@ -1,9 +1,11 @@
 import React from "react";
+import Layout from "../../Layout";
 
 
 const Background = () => {
     return (
-        <div>Background</div>
+        <Layout prefrence="secondary"></Layout>
+
     )
 }
 

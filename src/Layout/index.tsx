@@ -7,7 +7,7 @@ import FooterHome from "../components/footer/footer_home";
 import ThemePrefrence from "../types/generalTypes";
 
 interface LayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
   prefrence: ThemePrefrence;
 }
 
@@ -15,7 +15,9 @@ interface LayoutProps {
 
 const Layout = ({ children, prefrence }: LayoutProps,) => {
   let backgroundStyle: SxProps<Theme> = {};
-  if(prefrence === ("primary" as ThemePrefrence){
+  let bodyStyle: SxProps<Theme> = {};
+
+  if(prefrence === "primary") {
     backgroundStyle = {
       //display: "flex",
       // padding: 3,
@@ -31,10 +33,24 @@ const Layout = ({ children, prefrence }: LayoutProps,) => {
       backgroundRepeat: "no-repeat",
       zIndex: -1,
       //backgroundColor: "#F0FAFC",
-      overflow: "hidden",
+      //overflow: "hidden",
       //color: "#F0FAFC",
       position: "fixed",
     }
+
+    bodyStyle = {
+      width: "100%", 
+      overflowY: "scroll", 
+      //height: "72.5vh",
+      flex: 1,
+      marginTop: '15vh',
+      marginBottom: '10vh',
+      // display: "flex",
+      // flexDirection: "column",
+      // justifyContent: "center",
+      // alignItems: "center",
+    }
+
   }else if( prefrence=== "secondary"){
     backgroundStyle = {
       height: "100vh",
@@ -49,6 +65,20 @@ const Layout = ({ children, prefrence }: LayoutProps,) => {
       backgroundColor: "#F0FAFC",
       position: "fixed",
     }
+
+    bodyStyle = {
+      width: "100%", 
+      overflowY: "scroll", 
+      //height: "72.5vh",
+      flex: 1,
+      marginTop: '10vh',
+      marginBottom: '10vh',
+      // display: "flex",
+      // flexDirection: "column",
+      // justifyContent: "center",
+      // alignItems: "center",
+    }
+
   }
 
   return (
@@ -57,24 +87,11 @@ const Layout = ({ children, prefrence }: LayoutProps,) => {
     >
       <Sidebar prefrence={prefrence}/> 
       <Box 
-        sx={{ 
-                width: "100%", 
-                overflowY: "scroll", 
-                //height: "72.5vh",
-                flex: 1,
-                marginTop: '15vh',
-                marginBottom: '10vh',
-                // display: "flex",
-                // flexDirection: "column",
-                // justifyContent: "center",
-                // alignItems: "center",
-
-            }}
+        sx={bodyStyle}
       >
         {children}
       </Box>
-      <FooterHome/>
-      
+      <FooterHome prefrence={prefrence}/>
     </Box>
   );
 };

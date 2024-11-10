@@ -2,16 +2,19 @@ import { Box, Button, SxProps, Theme } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/images/TELogoNoBackground.png"
 import React from "react";
+import ThemePrefrence from "../../types/generalTypes";
+import primaryButtonStyle from "../../styles/button/inxex";
 
-type SidebarType = "primary" | "secondary";
+type SidebarProps = {
+    prefrence: ThemePrefrence
+}
 
-
+const homeLink = {
+    name: "Home",
+    link: "/"
+}
 
 const navLinks = [
-  {
-    name: "Home",
-    link: "/",
-  },
   {
     name: "Projects",
     link: "/Projects",
@@ -26,7 +29,7 @@ const navLinks = [
   },
 ];
 
-const Sidebar = (prefrence: SidebarType ) => {
+const Sidebar = ({prefrence}: SidebarProps ) => {
   const { pathname } = useLocation();
   let headerStyle: SxProps<Theme> = {};
 
@@ -47,10 +50,7 @@ const Sidebar = (prefrence: SidebarType ) => {
             // },
             alignItems: "center",
             justifyContent: "space-between",
-            width: {
-              sm: 1,
-              lg: 1,
-            },
+            width: "100%",
             height: "15vh",
         }
         break;
@@ -61,7 +61,7 @@ const Sidebar = (prefrence: SidebarType ) => {
             padding: 0,
             borderRadius: 0,
             position: "fixed",
-            left: 0,
+            right: 0,
             top: 0,
             display: "flex",
             zIndex: 2,
@@ -71,10 +71,7 @@ const Sidebar = (prefrence: SidebarType ) => {
             // },
             alignItems: "center",
             justifyContent: "space-between",
-            width: {
-              sm: 1,
-              lg: 1,
-            },
+            width: "100%",
             height: "10vh",
         }
         break;
@@ -85,28 +82,7 @@ const Sidebar = (prefrence: SidebarType ) => {
 
   return (
     <Box
-      sx={{
-        backgroundColor: "transparent",
-        padding: 0,
-        borderRadius: 0,
-        position: "fixed",
-        left: 0,
-        top: 0,
-        display: "flex",
-        zIndex: 2,
-        // flexDirection: {
-        //   xs: "column",
-        //   lg: "column",
-        // },
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: {
-          sm: 1,
-          lg: 1,
-        },
-        height: "15vh",
-        
-      }}
+      sx={headerStyle}
     >
         <Box
             sx= {{
@@ -115,6 +91,7 @@ const Sidebar = (prefrence: SidebarType ) => {
                 right: 0,
                 width: {
                     md: "40%",
+                    sd: "100",
                     xs: "100%",
                 },
                 height: "50%",
@@ -132,7 +109,7 @@ const Sidebar = (prefrence: SidebarType ) => {
                     to={item.link}
                     style={{textDecoration:"none"}}
                 >
-                    <Button variant="contained">{item.name}</Button>
+                    <Button variant="contained" sx={primaryButtonStyle}>{item.name}</Button>
                 </Link>
             ))}
         </Box>
@@ -152,17 +129,22 @@ const Sidebar = (prefrence: SidebarType ) => {
                 width: "10%",
             }}
         >
-            <img
-                src={Logo}
-                alt="Placeholder"
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    opacity: 1.0
-                }}
-                
-            />
-                
+            <Link
+                key={homeLink.name}
+                to={homeLink.link}
+                style={{textDecoration:"none"}}
+            >
+                <img
+                    src={Logo}
+                    alt="Placeholder"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        opacity: 1.0
+                    }}
+                    
+                />
+            </Link>  
             
         </Box>
 
