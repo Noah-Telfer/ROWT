@@ -1,7 +1,10 @@
-import { Box, SxProps, Theme, Typography } from "@mui/material";
+import { Box, SvgIcon, SxProps, Theme, Typography } from "@mui/material";
 import Logo from "../../assets/images/TELogoNoBackground.png";
 import React from "react";
-import ThemePrefrence from "../../types/generalTypes";
+import {ThemePrefrence} from "../../types/generalTypes";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 type FooterHomeProps = {
     prefrence: ThemePrefrence
@@ -63,7 +66,16 @@ const FooterHome = ({prefrence}: FooterHomeProps) => {
                         flex: 1, 
                     }} 
             > 
-                <Typography variant="h4"> Telfer Enterprises </Typography> 
+                <Typography 
+                    variant="h4"
+                    sx={{
+                        color: prefrence === "primary" ? "#000000" : "#E89465",
+                        fontWeight: 600,
+                        fontSize: "1.2rem"
+                    }}
+                > 
+                    Telfer Enterprises 
+                </Typography> 
             </Box>
 
 
@@ -93,17 +105,27 @@ const FooterHome = ({prefrence}: FooterHomeProps) => {
                             sm: "none",
                             md: "flex",
                         },
-                        flexDirection: "column",
+                        flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center",
                         textAlign: "center", 
                         flex: 1, 
+                        gap: "16px",
                     }} 
             > 
-                <Typography variant="h4"> Icons Go Here </Typography> 
+                <LinkedInIcon
+                    fontSize="large"
+                    sx={{
+                        color: prefrence === "primary" ? undefined : "#F0FAFC",
+                    }}
+                />
+                <GitHubIcon 
+                    fontSize="large"
+                    sx={{
+                        color: prefrence === "primary" ? undefined : "#F0FAFC",
+                    }}
+                />
             </Box>
-
-
         </Box>
     );
 };

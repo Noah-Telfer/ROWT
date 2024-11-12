@@ -2,7 +2,7 @@ import { Box, Button, SxProps, Theme } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/images/TELogoNoBackground.png"
 import React from "react";
-import ThemePrefrence from "../../types/generalTypes";
+import {ThemePrefrence} from "../../types/generalTypes";
 import primaryButtonStyle from "../../styles/button/inxex";
 
 type SidebarProps = {

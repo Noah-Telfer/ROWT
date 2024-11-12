@@ -1,6 +1,11 @@
 
 
-type ThemePrefrence = "primary" | "secondary";
+export type ThemePrefrence = "primary" | "secondary";
 
-
-export default ThemePrefrence ;
+export type ProjectListJsonProps = {
+    _docId:      Number;
+    title:       String;
+    subTitle:    String;
+    discription: String;
+    image:       String;
+}[]

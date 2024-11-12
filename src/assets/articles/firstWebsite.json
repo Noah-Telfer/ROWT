@@ -1,0 +1,23 @@
+[
+    {
+        "_docId": 1,
+        "title": "Website Project",
+        "subTitle":"React UI project to dispaly PDF documents",
+        "discription":"Website is a standalone static UI that is displaying variaus projects. ",
+        "image" : "/images/seo.jpg"
+    },
+    {
+        "_docId": 2,
+        "title": "Website Project",
+        "subTitle":"React UI project to dispaly PDF documents",
+        "discription":"Website is a standalone static UI that is displaying variaus projects. ",
+        "image" : "/images/seo.jpg"
+    },
+    {
+        "_docId": 3,
+        "title": "Website Project",
+        "subTitle":"React UI project to dispaly PDF documents",
+        "discription":"Website is a standalone static UI that is displaying variaus projects. ",
+        "image" : "/images/seo.jpg"
+    }
+]

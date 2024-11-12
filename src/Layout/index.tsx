@@ -4,7 +4,7 @@ import Sidebar from "../components/sidebar";
 import ManOnMountain from "../assets/images/ManOnMountain.jpg";
 import HeroBody from "../components/herobody/herobody";
 import FooterHome from "../components/footer/footer_home";
-import ThemePrefrence from "../types/generalTypes";
+import {ThemePrefrence} from "../types/generalTypes";
 
 interface LayoutProps {
   children?: ReactNode;

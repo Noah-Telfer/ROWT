@@ -62,11 +62,11 @@ const HeroBody = () => {
           component="h1"
           variant="h2"
           sx={{
-            flex: {
-                xs:undefined,
-                sd: undefined,
-                md: 1,
-              },
+            flexBasis: {
+              xs:undefined,
+              sd: undefined,
+              md: "65%",
+            },
             textAlign:{
                 xs: "center",
                 sd: "center",
@@ -79,34 +79,40 @@ const HeroBody = () => {
         >
           Striving to Learn and<br/>Improve Everyday.
         </Typography>
-        <Link
-            key={projectLink.name}
-            to={projectLink.link}
-            style={{textDecoration:"none"}}
+        <Box 
+          sx={{
+            flexBasis: {
+              xs:undefined,
+              sd: undefined,
+              md: "35%",
+            },
+            justifyContent: "center",
+          }}
         >
-            <Button
-                variant="contained"
-                sx= {{
-                    flex: {
-                        xs:undefined,
-                        sd: undefined,
-                        md: 1,
-                    },
+          <Link
+              key={projectLink.name}
+              to={projectLink.link}
+              style={{textDecoration:"none"}}
+          >
+              <Button
+                  variant="contained"
+                  sx= {{
 
-                    maxWidth: "140px",
-                    maxHeight: "60px",
-                    minHeight: "60px",
-                    backgroundColor: "#E89465",
-                    borderRadius: "22px",
-                    color: "#F0FAFC", 
-                    fontWeight: 700, 
-                    padding: "8px 16px", 
-                    fontSize: "1rem"
-                }}
-            > 
-                {projectLink.name}
-            </Button>
-        </Link>
+                      maxWidth: "140px",
+                      maxHeight: "60px",
+                      minHeight: "60px",
+                      backgroundColor: "#E89465",
+                      borderRadius: "22px",
+                      color: "#F0FAFC", 
+                      fontWeight: 700, 
+                      padding: "8px 16px", 
+                      fontSize: "1rem"
+                  }}
+              > 
+                  {projectLink.name}
+              </Button>
+          </Link>
+        </Box>
       </Box>
     </Box>
   );
